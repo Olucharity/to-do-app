@@ -54,17 +54,24 @@ export default {
 </script>
 
 <style>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 .app{
   display: grid;
   place-items: center;
   height: 100vh;
 }
 p{
-  margin-top: -20px;
+  margin-top: -10px;
 }
 .container{
   display: grid;
   place-items: center;
+  gap: 20px;
 }
 .container input{
   width: 400px;
@@ -112,21 +119,45 @@ ul li .danger{
   color: rgb(90, 92, 90);
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:699px) {
   .container input{
     width: 300px;
   }
   ul{
     padding-top: 30px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
   }
   ul li{
     display: grid;
-    place-items: center;
+    place-items: start;
     width: 100%;
     margin-bottom: 27px;
-
+  }
+  ul li button{
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width:700px) {
+  .container
+  .container input{
+    width: 500px;
+  }
+ ul{
+    padding-top: 30px;
+    /* width: 500px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column; 
+    padding-right: 25px;   
+  }
+  
+  ul li{
+    width: 100%;
+    margin-bottom: 27px;
   }
 }
 </style>
