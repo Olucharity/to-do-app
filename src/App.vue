@@ -158,6 +158,6 @@ ul li .danger{
   ul li{
     width: 100%;
     margin-bottom: 27px;
-  }
-}
+  } 
+} 
 </style>
